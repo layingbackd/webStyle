@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    input[id="menubtn"]{
+      display: none;
+    }
+
+    input[id="menubtn"]+label{
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      cursor: pointer;
+      left: -10px;
+    }
+    
+    input[id="menubtn"]+label span{
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 10px;
+      border-radius: 5px;
+      background-color: white;
+      transition: all .35s;
+      margin: 10px;
+    }
+
+    input[id="menubtn"]:checked + label span{
+      transform: rotate(270deg);
+      transition-duration: 1s;
+      background-color: rgb(132, 255, 138);
+    }
+
+    
+    /* layout*/
+*{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+html body{
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+.wrap{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  width: 33.33vw;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+<div class="wrap">
+<div class="col0 column">
+</div>
+<div class="col1 column">
+  <div class="nav navbar1">통제의 환상</div>
+  <input type="checkbox" id="menubtn">
+  <label for="menubtn">
+  <span></span>
+</label>
+</div>
+<div class="col2 column"></div>
+<div class="nav navbar2"> </div>
+
+</div> 
+
+<!-- js script -->
+<script>
+// label 요소를 선택합니다.
+// var labelElement = document.querySelector('label[for="menubtn"]');
+
+// // 10개의 span 요소를 생성하고 라벨 내에 추가합니다.
+// for (var i = 0; i < 1; i++) {
+//   var spanElement = document.createElement('span');
+//   labelElement.appendChild(spanElement);
+// }
+</script>
+</body>
+</html>
